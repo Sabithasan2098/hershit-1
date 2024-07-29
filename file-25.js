@@ -1,5 +1,6 @@
 // কনস্ট্রাক্টর ফাংশন
 function CreateObj(name, age, passion, job) {
+  // when you call the createObj use new to don't create user
     this.name = name;
     this.age = age;
     this.passion = passion;
@@ -27,3 +28,10 @@ function CreateObj(name, age, passion, job) {
   console.log(user1.is18());   // Output: false
   console.log(user1.myJob());  // Output: I am continious learning
   
+
+  // to know only the functions properties
+  for(let key in user1){
+    if(user1.hasOwnProperty(key)){
+      console.log(key);
+    }
+  }
